@@ -1,0 +1,92 @@
+.btn {
+    --button-background: var(--blue-lightest);
+    --button-color: var(--blue-dark);
+    --button-border-color: var(--blue-base);
+    --button-hover-bg: var(--blue-light);
+    --button-focus-color: var(--blue-base);
+
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    height: 2rem;
+    justify-content: center;
+    padding: 0.01rem 1rem;
+    position: relative;
+    border-radius: 2px;
+
+    font-family: inherit;
+    font-size: 13px;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+    background-color: var(--button-background);
+    border: 1px solid var(--button-border-color);
+    color: var(--button-color);
+    &:hover:not([disabled]) {
+        filter: saturate(200%);
+    }
+    &:active:not([disabled]) {
+        transform: translateY(1px);
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        
+    }
+    &:focus-visible {
+        outline: 4px solid var(--button-focus-color);
+        outline-offset: 2px;
+    }
+    &:focus:not(:focus-visible) {
+        box-shadow: 0 0 0 2px var(--button-focus-color);
+        outline: none;
+    }
+
+    &.success {
+        --button-background: var(--green-lightest);
+        --button-color: var(--green-dark);
+        --button-border-color: var(--green-dark);
+        --button-hover-bg: var(--green-base);
+        --button-focus-color: var(--green-base);
+    }
+
+    &.danger {
+        --button-background: var(--red-lightest);
+        --button-color: var(--red-dark);
+        --button-border-color: var(--red-dark);
+        --button-hover-bg: var(--red-base);
+        --button-focus-color: var(--red-base);
+    }
+
+    &.solid {
+        background-color: var(--button-border-color);
+        color: var(--button-background);
+    }
+    &.minimal {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    &.loading {
+            svg {
+                height: 16px;
+                width: 16px;
+                transform: translateY(2px) translateX(-2px);
+                circle {
+                    stroke-dashoffset: 600;
+                    stroke-dasharray: 300;
+                    stroke-width: 12;
+                    stroke-miterlimit: 10;
+                    stroke-linecap: round;
+                    animation: loading 1.6s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite;
+                    stroke: rgba(67, 90, 111, 0.47);
+                    fill: transparent;
+                }
+            }
+    }
+}
+
+@keyframes loading {
+    0%{stroke-dashoffset:600;}
+    100%{stroke-dashoffset:0;}
+}

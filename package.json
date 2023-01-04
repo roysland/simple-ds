@@ -1,0 +1,17 @@
+{
+  "name": "testframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "watch": "sass src/index.scss bundle.css -w",
+    "build": "sass src/index.scss bundle.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

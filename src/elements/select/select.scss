@@ -1,0 +1,16 @@
+select {
+    border-radius: 2px;
+    border: 1px solid var(--neutral-light);
+    font-family: inherit;
+    padding: 0.25rem 0.5rem;
+    height: 2rem;
+    box-sizing: border-box;
+    display: inline-flex;
+    background-color: var(--neutral-lightest);
+    &[multiple] {
+        height: auto;
+    }
+    option {
+        border: 1px solid var(--neutral-light);
+    }
+}

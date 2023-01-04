@@ -1,0 +1,30 @@
+input[type="radio"] {
+    background-color: var(--green-lightest);
+    border-color: var(--green-base);
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 50%;
+    &:before {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: var(--green-base);
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        scale: 0;
+        transition: scale 100ms ease-in-out, rotate 100ms ease-in-out 50ms;
+    }
+    &:checked {
+        background-color: var(--green-light);
+        &:before {
+            scale: 1;
+            rotate: 90deg;
+        }
+    }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="./bundle.css" />
+</head>
+<body>
+    <article class="alert" data-state="warning" data-type="default" dismissable>
+        <div class="alert-icon"><svg data-icon="info-sign" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zM7 3h2v2H7V3zm3 10H6v-1h1V7H6V6h3v6h1v1z" fill-rule="evenodd"></path></svg></div>
+        <div class="alert-text">
+            This is an alert
+        </div>
+        <div class="alert-dismiss"><svg data-icon="cross" viewBox="0 0 16 16"><path d="M9.41 8l3.29-3.29c.19-.18.3-.43.3-.71a1.003 1.003 0 00-1.71-.71L8 6.59l-3.29-3.3a1.003 1.003 0 00-1.42 1.42L6.59 8 3.3 11.29c-.19.18-.3.43-.3.71a1.003 1.003 0 001.71.71L8 9.41l3.29 3.29c.18.19.43.3.71.3a1.003 1.003 0 00.71-1.71L9.41 8z" fill-rule="evenodd"></path></svg></div>
+    </article>
+
+    <div>
+        <span class="badge">Neutral</span>
+        <span class="badge" data-color="green">Green</span>
+        <span class="badge" data-color="blue">Blue</span>
+        <span class="badge" data-color="red">Red</span>
+        <span class="badge" data-color="orange">Orange</span>
+        <span class="badge" data-color="purple">Purple</span>
+        <span class="badge" data-color="yellow">Yellow</span>
+        <span class="badge" data-color="teal">Teal</span>
+    </div>
+    <div>
+        <button class="btn">Default</button>
+        <button class="btn solid">Default</button>
+        <button class="btn minimal">Default</button>
+    </div>
+    <div>
+        <button class="btn">Default</button>
+        <button class="btn solid success">Default</button>
+        <button class="btn danger minimal">Default</button>
+    </div>
+    <div>
+        <button class="btn" disabled>Default</button>
+        <button class="btn success" disabled>Default</button>
+        <button class="btn danger" disabled>Default</button>
+    </div>
+    <div>
+        <button class="btn loading">
+            <svg x="0px" y="0px" viewBox="0 0 150 150"><circle cx="75" cy="75" r="60"></circle></svg>
+            Default</button>
+        <button class="btn success loading">Default</button>
+        <button class="btn danger loading">Default</button>
+    </div>
+
+    
+    <div class="modal">
+        <button class="btn" onclick="toggleModal(1, this)">Open dialog</button>
+        <dialog id="1">
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+
+        <button class="btn" onclick="toggleModal(2, this)">Open dialog</button>
+        <dialog class="menu" id="2">
+            <ul>
+                <li class="menu-item" tabindex="1">Item 1</li>
+                <li class="menu-item" tabindex="1">Item 2</li>
+                <li class="menu-item" tabindex="1">Item 3</li>
+                <li class="menu-item" tabindex="1">Item 4</li>
+            </ul>
+            <form method="dialog">
+                <button>OK</button>
+            </form>
+        </dialog>
+    </div>
+
+    <div>
+        <input type="checkbox">
+    </div>
+    <div>
+        <input type="radio" name="a" value="0">
+        <input type="radio" name="a" value="1">
+    </div>
+    <div>
+        <select name="my-select">
+            <option>Backend Developer</option>
+            <option>Frontend Developer</option>
+            <option>Devops</option>
+            <option>Tester</option>
+            <option>UI/UX</option>
+        </select>
+    </div>
+
+    <div>
+        <progress id="file" value="32" max="100"> 32% </progress>
+    </div>
+<script>
+    function toggleModal (stringId, that) {
+        console.log(that)
+        const modal = document.getElementById(stringId)
+        
+        modal.showModal()
+        if (modal.classList.contains('menu')) {
+            const triggerPosition = that.getBoundingClientRect()
+            console.log(triggerPosition)
+            modal.setAttribute('style', `
+            left: ${triggerPosition.x + 32}px; 
+            height: ${modal.getBoundingClientRect().height}px;
+            top: ${triggerPosition.y + 32}px;
+            min-width: ${triggerPosition.width}px;
+            max-width: ${triggerPosition.width * 2}px;
+            `)
+        }
+    }
+</script>
+</body>
+</html>
