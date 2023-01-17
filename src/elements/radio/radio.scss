@@ -1,6 +1,7 @@
 input[type="radio"] {
-    background-color: var(--green-lightest);
-    border-color: var(--green-base);
+    background-color: var(--neutral-lightest);
+    border: 1px solid;
+    border-color: var(--border);
     width: 24px;
     height: 24px;
     appearance: none;
@@ -10,10 +11,10 @@ input[type="radio"] {
     border-radius: 50%;
     &:before {
         content: "";
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
         border-radius: 50%;
-        background-color: var(--green-base);
+        background-color: var(--green);
         position: absolute;
         top: 4px;
         left: 4px;
@@ -21,7 +22,7 @@ input[type="radio"] {
         transition: scale 100ms ease-in-out, rotate 100ms ease-in-out 50ms;
     }
     &:checked {
-        background-color: var(--green-light);
+        // background-color: var(--green-light);
         &:before {
             scale: 1;
             rotate: 90deg;

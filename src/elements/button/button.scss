@@ -1,10 +1,10 @@
 .btn {
-    --button-background: var(--blue-lightest);
-    --button-color: var(--blue-dark);
-    --button-border-color: var(--blue-base);
-    --button-hover-bg: var(--blue-light);
-    --button-focus-color: var(--blue-base);
-
+    --button-background: var(--blue);
+    --button-color: var(--blue-lightest);
+    --button-border-color: var(--blue);
+    --button-hover-bg: var(--blue-dark);
+    --button-focus-color: var(--blue-darkest);
+    user-select: none;
     align-items: center;
     box-sizing: border-box;
     flex-wrap: nowrap;
@@ -13,9 +13,10 @@
     padding: 0.01rem 1rem;
     position: relative;
     border-radius: 2px;
-
+    cursor: pointer;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 600;
     line-height: 2rem;
     margin-bottom: 1rem;
     margin-right: 1rem;
@@ -61,11 +62,12 @@
 
     &.solid {
         background-color: var(--button-border-color);
-        color: var(--button-background);
+        color: #fff;
     }
     &.minimal {
         background-color: transparent;
         border-color: transparent;
+        color: var(--button-border-color);
     }
     &.loading {
             svg {
@@ -79,7 +81,7 @@
                     stroke-miterlimit: 10;
                     stroke-linecap: round;
                     animation: loading 1.6s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite;
-                    stroke: rgba(67, 90, 111, 0.47);
+                    stroke: rgba(192, 204, 216, 0.47);
                     fill: transparent;
                 }
             }

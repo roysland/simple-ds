@@ -1,0 +1,29 @@
+$neutral-0: #000;
+$neutral-1: #1b2029;
+$neutral-2: #dadde2;
+$neutral-4: #fff;
+
+$colors: (
+    'neutral': #888,
+    'purple': #7d58ff,
+    'blue': #157ff2,
+    'red': #eb293a,
+    'orange': #f56753,
+    'yellow': #f9a328,
+    'green': #14c684,
+    'pink': #ff007d,
+    'cyan': #20d5ff
+);
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+@function color($colorMap) {
+    $color: map-get($colors, $colorMap);
+    @return $color;
+}

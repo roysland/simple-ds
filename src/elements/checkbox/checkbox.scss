@@ -1,6 +1,7 @@
 input[type="checkbox"] {
-    background-color: var(--green-lightest);
-    border-color: var(--green-base);
+    background-color: var(--neutral-lightest);
+    border-color: var(--border);
+    border: 1px solid var(--border);
     width: 24px;
     height: 24px;
     appearance: none;
@@ -10,10 +11,10 @@ input[type="checkbox"] {
     border-radius: 2px;
     &:before {
         content: "";
-        width: 16px;
-        height: 16px;
-        border-radius: 2px;
-        background-color: var(--green-base);
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background-color: var(--green);
         position: absolute;
         top: 4px;
         left: 4px;
@@ -21,10 +22,11 @@ input[type="checkbox"] {
         transition: scale 100ms ease-in-out, rotate 100ms ease-in-out 50ms;
     }
     &:checked {
-        background-color: var(--green-light);
+        // background-color: var(--green-light);
         &:before {
             scale: 1;
             rotate: 90deg;
+            border-radius: 2px;
         }
     }
     &:focus {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,11 +26,11 @@
         <span class="badge" data-color="orange">Orange</span>
         <span class="badge" data-color="purple">Purple</span>
         <span class="badge" data-color="yellow">Yellow</span>
-        <span class="badge" data-color="teal">Teal</span>
+        <span class="badge" data-color="cyan">Teal</span>
     </div>
     <div>
-        <button class="btn">Default</button>
-        <button class="btn solid">Default</button>
+        <button class="btn" onclick="document.documentElement.setAttribute('theme', 'dark')">Default</button>
+        <button class="btn solid" onclick="document.documentElement.setAttribute('theme', 'light')">Default</button>
         <button class="btn minimal">Default</button>
     </div>
     <div>
@@ -93,7 +93,12 @@
     </div>
 
     <div>
-        <progress id="file" value="32" max="100"> 32% </progress>
+        <progress id="file" value="85" max="100"> 32% </progress>
+    </div>
+
+    <div style="margin-top: 4rem;">
+        <label for="input1">First Name</label>
+        <input id="input1" type="text">
     </div>
 <script>
     function toggleModal (stringId, that) {

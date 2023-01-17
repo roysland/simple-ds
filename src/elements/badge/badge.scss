@@ -2,7 +2,7 @@
     --badge-background: var(--neutral-light);
     --badge-color: var(--neutral-dark);
     --badge-border-radius: 2px;
-
+    user-select: none;
     background-color: var(--badge-background);
     color: var(--badge-color);
     border-radius: var(--badge-border-radius);
@@ -17,31 +17,31 @@
     }
 
     &[data-color="blue"] {
-        --badge-background: var(--blue-lightest);
+        --badge-background: var(--blue-light);
         --badge-color: var(--blue-dark);
     }
     &[data-color="red"] {
-        --badge-background: var(--red-lightest);
+        --badge-background: var(--red-light);
         --badge-color: var(--red-dark);
     }
     &[data-color="yellow"] {
-        --badge-background: var(--yellow-lightest);
+        --badge-background: var(--yellow-light);
         --badge-color: var(--yellow-dark);
     }
     &[data-color="orange"] {
-        --badge-background: var(--orange-lightest);
+        --badge-background: var(--orange-light);
         --badge-color: var(--orange-dark);
     }
     &[data-color="green"] {
-        --badge-background: var(--green-lightest);
+        --badge-background: var(--green-light);
         --badge-color: var(--green-dark);
     }
     &[data-color="teal"] {
-        --badge-background: var(--teal-lightest);
+        --badge-background: var(--teal-light);
         --badge-color: var(--teal-dark);
     }
-    &[data-color="purple"] {
-        --badge-background: var(--purple-lightest);
-        --badge-color: var(--purple-dark);
+    &[data-color="cyan"] {
+        --badge-background: var(--cyan-light);
+        --badge-color: var(--cyan-dark);
     }
 }

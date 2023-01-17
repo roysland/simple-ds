@@ -1,87 +1,112 @@
 :root {
-  --N1: #f9f9fb;
-  --N2: #f5f6f7;
-  --N3: #edf0f2;
-  --N4: #e4e7eb;
-  --N5: #c7ced4;
-  --N6: #a6b1bb;
-  --N7: #7b8b9a;
-  --N8: #66788a;
-  --N9: #425a70;
-  --N10: #234361;
-  --N1A: rgba(67, 90, 111, .04);
-  --N2A: rgba(67, 90, 111, .06);
-  --N3A: rgba(67, 90, 111, .09);
-  --N4A: rgba(67, 90, 111, .14);
-  --N5A: rgba(67, 90, 111, .3);
-  --N6A: rgba(67, 90, 111, .47);
-  --N7A: rgba(67, 90, 111, .7);
-  --N8A: rgba(67, 90, 111, .81);
-  --B1: #f7f9fd;
-  --B2: #f1f7fc;
-  --B3: #e9f2fa;
-  --B4: #ddebf7;
-  --B5: #b7d4ef;
-  --B6: #8fbce6;
-  --B7: #579ad9;
-  --B8: #3d8bd4;
-  --B9: #1070ca;
-  --B10: #084b8a;
-  --B1A: rgba(16, 112, 202, .04);
-  --B2A: rgba(16, 112, 202, .06);
-  --B3A: rgba(16, 112, 202, .09);
-  --B4A: rgba(16, 112, 202, .14);
-  --B5A: rgba(16, 112, 202, .3);
-  --B6A: rgba(16, 112, 202, .47);
-  --B7A: rgba(16, 112, 202, .7);
-  --B8A: rgba(16, 112, 202, .81);
-  --neutral-lightest: var(--N1);
-  --neutral-light: var(--N4);
-  --neutral-base: var(--N9);
-  --neutral-dark: var(--N10);
-  --blue-lightest: var(--B1);
-  --blue-light: var(--B4);
-  --blue-base: var(--B9);
-  --blue-dark: var(--B10);
-  --red-lightest: #fef6f6;
-  --red-light: #fae2e2;
-  --red-base: #ec4c47;
-  --red-dark: #bf0e08;
-  --orange-lightest: #fdf8f3;
-  --orange-light: #fae3cd;
-  --orange-base: #d9822b;
-  --orange-dark: #95591e;
-  --yellow-lightest: #fef8e7;
-  --yellow-light: #fbe6a2;
-  --yellow-base: #f7d154;
-  --yellow-dark: #7e6514;
-  --green-lightest: #f1faf5;
-  --green-light: #d4eee2;
-  --green-base: #47b881;
-  --green-dark: #00783e;
-  --teal-lightest: #f1fbfc;
-  --teal-light: #d2eef3;
-  --teal-base: #14b5d0;
-  --teal-dark: #007489;
-  --purple-lightest: #f8f7fc;
-  --purple-light: #eae7f8;
-  --purple-base: #735dd0;
-  --purple-dark: #37248f;
-  --color-border-default: var(--N4);
-  --color-border-muted: var(--N3);
-  --color-border-shadow: var(--N6A);
-  --color-blurry-shadow: var(--N5A);
-  --elevation-0: 0 0 1px var(--color-border-shadow);
-  --elevation-1: 0 0 1px var(--color-border-shadow), 0 2px 4px -2px var(--color-blurry-shadow);
-  --elevation-2: 0 0 1px var(--color-border-shadow), 0 5px 8px -4px var(--color-blurry-shadow);
-  --elevation-3: 0 0 1px var(--color-border-shadow), 0 8px 10px -4px var(--color-blurry-shadow);
-  --elevation-4: 0 0 1px var(--color-border-shadow), 0 16px 24px -8px var(--color-blurry-shadow);
-  --elevation-5: 0 0 1px var(--color-border-shadow), 0 2px 4px -2px var(--color-blurry-shadow);
+  --neutral: #888;
+  --neutral-lightest: #f9f9f9;
+  --neutral-light: #cfcfcf;
+  --neutral-dark: #5f5f5f;
+  --neutral-darkest: #747474;
+  --purple: #7d58ff;
+  --purple-lightest: #f9f7ff;
+  --purple-light: #cbbcff;
+  --purple-dark: #583eb3;
+  --purple-darkest: #6a4bd9;
+  --blue: #157ff2;
+  --blue-lightest: #f3f9fe;
+  --blue-light: #a1ccfa;
+  --blue-dark: #0f59a9;
+  --blue-darkest: #126cce;
+  --red: #eb293a;
+  --red-lightest: #fef4f5;
+  --red-light: #f7a9b0;
+  --red-dark: #a51d29;
+  --red-darkest: #c82331;
+  --orange: #f56753;
+  --orange-lightest: #fff7f6;
+  --orange-light: #fbc2ba;
+  --orange-dark: #ac483a;
+  --orange-darkest: #d05847;
+  --yellow: #f9a328;
+  --yellow-lightest: #fffaf4;
+  --yellow-light: #fddaa9;
+  --yellow-dark: #ae721c;
+  --yellow-darkest: #d48b22;
+  --green: #14c684;
+  --green-lightest: #f3fcf9;
+  --green-light: #a1e8ce;
+  --green-dark: #0e8b5c;
+  --green-darkest: #11a870;
+  --pink: #ff007d;
+  --pink-lightest: #fff2f9;
+  --pink-light: #ff99cb;
+  --pink-dark: #b30058;
+  --pink-darkest: #d9006a;
+  --cyan: #20d5ff;
+  --cyan-lightest: #f4fdff;
+  --cyan-light: #a6eeff;
+  --cyan-dark: #1695b3;
+  --cyan-darkest: #1bb5d9;
+  --border: #ddd;
+  --border-radius: 3px;
+  --bg: #fff;
+  --fg: #333;
+}
+
+[theme=dark]:root {
+  --neutral: #888;
+  --neutral-lightest: #0f0f0f;
+  --neutral-light: #363636;
+  --neutral-dark: #c4c4c4;
+  --neutral-darkest: #949494;
+  --purple: #7d58ff;
+  --purple-lightest: #0e0a1c;
+  --purple-light: #322366;
+  --purple-dark: #beacff;
+  --purple-darkest: #8a69ff;
+  --blue: #157ff2;
+  --blue-lightest: #020e1b;
+  --blue-light: #083361;
+  --blue-dark: #8abff9;
+  --blue-darkest: #2c8cf3;
+  --red: #eb293a;
+  --red-lightest: #1a0506;
+  --red-light: #5e1017;
+  --red-dark: #f5949d;
+  --red-darkest: #ed3e4e;
+  --orange: #f56753;
+  --orange-lightest: #1b0b09;
+  --orange-light: #622921;
+  --orange-dark: #fab3a9;
+  --orange-darkest: #f67664;
+  --yellow: #f9a328;
+  --yellow-lightest: #1b1204;
+  --yellow-light: #644110;
+  --yellow-dark: #fcd194;
+  --yellow-darkest: #faac3e;
+  --green: #14c684;
+  --green-lightest: #02160f;
+  --green-light: #084f35;
+  --green-dark: #8ae3c2;
+  --green-darkest: #2ccc90;
+  --pink: #ff007d;
+  --pink-lightest: #1c000e;
+  --pink-light: #660032;
+  --pink-dark: #ff80be;
+  --pink-darkest: #ff1a8a;
+  --cyan: #20d5ff;
+  --cyan-lightest: #04171c;
+  --cyan-light: #0d5566;
+  --cyan-dark: #90eaff;
+  --cyan-darkest: #36d9ff;
+  --border: #333;
+  --border-radius: 3px;
+  --bg: rgb(0, 0, 0);
+  --fg: #eee;
 }
 
 html, body {
   font-family: "Inter", sans-serif;
   font-size: 15px;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 .alert {
@@ -147,6 +172,7 @@ html, body {
   --badge-background: var(--neutral-light);
   --badge-color: var(--neutral-dark);
   --badge-border-radius: 2px;
+  user-select: none;
   background-color: var(--badge-background);
   color: var(--badge-color);
   border-radius: var(--badge-border-radius);
@@ -161,40 +187,41 @@ html, body {
   color: var(--badge-background);
 }
 .badge[data-color=blue] {
-  --badge-background: var(--blue-lightest);
+  --badge-background: var(--blue-light);
   --badge-color: var(--blue-dark);
 }
 .badge[data-color=red] {
-  --badge-background: var(--red-lightest);
+  --badge-background: var(--red-light);
   --badge-color: var(--red-dark);
 }
 .badge[data-color=yellow] {
-  --badge-background: var(--yellow-lightest);
+  --badge-background: var(--yellow-light);
   --badge-color: var(--yellow-dark);
 }
 .badge[data-color=orange] {
-  --badge-background: var(--orange-lightest);
+  --badge-background: var(--orange-light);
   --badge-color: var(--orange-dark);
 }
 .badge[data-color=green] {
-  --badge-background: var(--green-lightest);
+  --badge-background: var(--green-light);
   --badge-color: var(--green-dark);
 }
 .badge[data-color=teal] {
-  --badge-background: var(--teal-lightest);
+  --badge-background: var(--teal-light);
   --badge-color: var(--teal-dark);
 }
-.badge[data-color=purple] {
-  --badge-background: var(--purple-lightest);
-  --badge-color: var(--purple-dark);
+.badge[data-color=cyan] {
+  --badge-background: var(--cyan-light);
+  --badge-color: var(--cyan-dark);
 }
 
 .btn {
-  --button-background: var(--blue-lightest);
-  --button-color: var(--blue-dark);
-  --button-border-color: var(--blue-base);
-  --button-hover-bg: var(--blue-light);
-  --button-focus-color: var(--blue-base);
+  --button-background: var(--blue);
+  --button-color: var(--blue-lightest);
+  --button-border-color: var(--blue);
+  --button-hover-bg: var(--blue-dark);
+  --button-focus-color: var(--blue-darkest);
+  user-select: none;
   align-items: center;
   box-sizing: border-box;
   flex-wrap: nowrap;
@@ -203,8 +230,10 @@ html, body {
   padding: 0.01rem 1rem;
   position: relative;
   border-radius: 2px;
+  cursor: pointer;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 600;
   line-height: 2rem;
   margin-bottom: 1rem;
   margin-right: 1rem;
@@ -246,11 +275,12 @@ html, body {
 }
 .btn.solid {
   background-color: var(--button-border-color);
-  color: var(--button-background);
+  color: #fff;
 }
 .btn.minimal {
   background-color: transparent;
   border-color: transparent;
+  color: var(--button-border-color);
 }
 .btn.loading svg {
   height: 16px;
@@ -264,7 +294,7 @@ html, body {
   stroke-miterlimit: 10;
   stroke-linecap: round;
   animation: loading 1.6s cubic-bezier(0.4, 0.15, 0.6, 0.85) infinite;
-  stroke: rgba(67, 90, 111, 0.47);
+  stroke: rgba(192, 204, 216, 0.47);
   fill: transparent;
 }
 
@@ -277,8 +307,9 @@ html, body {
   }
 }
 input[type=checkbox] {
-  background-color: var(--green-lightest);
-  border-color: var(--green-base);
+  background-color: var(--neutral-lightest);
+  border-color: var(--border);
+  border: 1px solid var(--border);
   width: 24px;
   height: 24px;
   appearance: none;
@@ -289,22 +320,20 @@ input[type=checkbox] {
 }
 input[type=checkbox]:before {
   content: "";
-  width: 16px;
-  height: 16px;
-  border-radius: 2px;
-  background-color: var(--green-base);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--green);
   position: absolute;
   top: 4px;
   left: 4px;
   scale: 0;
   transition: scale 100ms ease-in-out, rotate 100ms ease-in-out 50ms;
 }
-input[type=checkbox]:checked {
-  background-color: var(--green-light);
-}
 input[type=checkbox]:checked:before {
   scale: 1;
   rotate: 90deg;
+  border-radius: 2px;
 }
 input[type=checkbox]:focus {
   outline: 1px solid var(--green-dark);
@@ -380,8 +409,9 @@ ul, li {
   }
 }
 input[type=radio] {
-  background-color: var(--green-lightest);
-  border-color: var(--green-base);
+  background-color: var(--neutral-lightest);
+  border: 1px solid;
+  border-color: var(--border);
   width: 24px;
   height: 24px;
   appearance: none;
@@ -392,18 +422,15 @@ input[type=radio] {
 }
 input[type=radio]:before {
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background-color: var(--green-base);
+  background-color: var(--green);
   position: absolute;
   top: 4px;
   left: 4px;
   scale: 0;
   transition: scale 100ms ease-in-out, rotate 100ms ease-in-out 50ms;
-}
-input[type=radio]:checked {
-  background-color: var(--green-light);
 }
 input[type=radio]:checked:before {
   scale: 1;
@@ -425,6 +452,84 @@ select[multiple] {
 }
 select option {
   border: 1px solid var(--neutral-light);
+  padding: 0.25rem 0.5rem;
+}
+
+progress {
+  display: block;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--neutral-lightest);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) inset;
+}
+progress[value] {
+  height: 20px;
+  background-color: var(--blue);
+  -webkit-animation: animate-stripes 5s linear infinite;
+  animation: animate-stripes 5s linear infinite;
+  border-radius: 9999px;
+}
+progress[value]::-webkit-progress-value {
+  background-image: -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)), -webkit-linear-gradient(left, var(--blue), var(--green));
+  border-radius: 9999px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+@-webkit-keyframes animate-stripes {
+  100% {
+    background-position: -100px 0px;
+  }
+}
+@keyframes animate-stripes {
+  100% {
+    background-position: -100px 0px;
+  }
+}
+input:not([type=checkbox]):not([type=radio]), select, textarea {
+  background-color: var(--bg);
+  border-width: 1px;
+  border-color: var(--border);
+  border-style: solid;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.2rem;
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+  border-radius: 3px;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  transition: all 0.05s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+input:not([type=checkbox]):not([type=radio]):focus, select:focus, textarea:focus {
+  background-color: var(--purple-lightest);
+  border-color: var(--purple);
+  outline: 0;
+}
+
+label {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 600;
+  text-rendering: geometricPrecision;
+  display: block;
+  font-size: 0.78rem;
+}
+label.inline {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=bundle.css.map */
